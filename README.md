@@ -21,13 +21,15 @@ The implementation follows the formulation presented in Katz and Plotkin, *Low-S
 Key elements include:
 
 - Discretization of the flat plate into bound-vortex panels
-- Enforcement of the no-penetration boundary condition
+- Placement of bound vortices at quarter-chord positions and enforcement of the no-penetration boundary condition at three-quarter-chord collocation points
 - Discrete wake-vortex modelling
-- Conservation of circulation through Kelvin's theorem
+- Enforcement of Kelvin's circulation theorem
 - Numerical solution of the resulting linear system at each time step
-- Calculation and visualization of transient aerodynamic loads
+- Calculation of unsteady lift, including circulatory and apparent-mass contributions
+- Calculation of induced drag from wake-induced downwash and the apparent-mass contribution
+- Visualization of transient aerodynamic loads and their steady-state limits
 
-## Simulation parameters
+## Simulation Parameters
 
 | Parameter | Value |
 |---|---:|
@@ -36,21 +38,25 @@ Key elements include:
 | Chord length | 1 m |
 | Air density | 1.225 kg/m³ |
 | Number of panels | 10 |
-| Non-dimensional time step | 0.25 |
+| Non-dimensional time step, \(\Delta \tau\) | 0.25 |
 | Number of time steps | 600 |
 
 ## Results
 
-The simulation examines the transient build-up of circulation, the evolution of lift following the impulsive start, and the decay of induced drag as the starting vortex moves downstream.
+The simulation examines three aspects of the unsteady aerodynamic response:
 
-The accompanying report contains the theoretical derivation, numerical results, plots, and discussion.
+- **Bound circulation:** Gradual development towards the steady-state thin-airfoil prediction as the starting vortex convects downstream.
+- **Unsteady lift:** An initial apparent-mass contribution followed by recovery towards the steady-state lift.
+- **Induced drag:** Transient drag associated with wake-induced downwash and the apparent-mass contribution, which diminishes as the unsteady effects decay.
+
+The accompanying report presents the theoretical derivation, numerical results, plots, and discussion of the physical behaviour.
 
 ## Reference
 
 Katz, J. and Plotkin, A. *Low-Speed Aerodynamics*, 2nd edition, Cambridge University Press, 2001, Section 13.8.
 
-## Academic context
+## Academic Context
 
 AE221 Aerodynamics — Term Paper, Part 1, Question 2.
 
-This repository documents coursework completed as part of my undergraduate studies. The report and implementation should be shared only in accordance with applicable course policies.
+This repository documents coursework completed as part of my undergraduate studies. The report and implementation are shared subject to applicable course policies.
