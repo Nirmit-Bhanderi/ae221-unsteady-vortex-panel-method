@@ -14,6 +14,16 @@ The simulation computes the time evolution of:
 - Unsteady lift per unit span, L′(t)
 - Induced drag coefficient, C_D(t)
 
+
+## Simulation Results
+
+The following plots show the time evolution of bound circulation,
+unsteady lift, and induced drag obtained from the vortex panel method.
+
+<p align="center">
+  <img src="vortex_panel_results.png" alt="Bound circulation, unsteady lift, and induced drag simulation results" width="750">
+</p>
+
 ## Methodology
 
 The implementation follows the formulation presented in Katz and Plotkin, *Low-Speed Aerodynamics*, Section 13.8.
