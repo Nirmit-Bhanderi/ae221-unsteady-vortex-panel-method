@@ -1,6 +1,6 @@
 # Unsteady Vortex Panel Method
 
-A computational aerodynamics project completed for **AE221: Aerodynamics** at the Indian Institute of Science (IISc).
+A computational aerodynamics project completed for **AE221: Aerodynamics** at the Indian Institute of Science (IISc) in 2024.
 
 ## Overview
 
